@@ -1,4 +1,4 @@
-words = [    
+word = [    
     'kayak',
     'shark',
     'paddle',

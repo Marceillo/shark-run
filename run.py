@@ -22,21 +22,34 @@ def username():
         else:
             print(f"{user_name}, ye scallywag! Yer handle should be naught but letters, from A to Z, both upper and lower,\n and be no shorter than a single letter and no longer than fifteen,\n with no other scurvy characters like numbers or symbols or the like!")
             break 
-def game_rules():
+def gamerules(user_name):
     """
     To provide and option for the user to see the game rules.
     """
-    
+    while True:
+        game_rules = input(f"{user_name}! Should ye want to see the rules, press Y or N, savvy?" )
+        if re.fullmatch(r'[YyNn]', game_rules):
+            game_rules = game_rules.lower()
+        if game_rules == 'y':
+            print()
+            shark.instructions()
+            break
+            
+        elif game_rules == 'n':
+            print(f"{user_name} Alright, ye scallywags! Let's be shovin' off, shall we?")
+            break
+            
+        
 
 def main():
     """
     To call all other functions in the game.
     """
     shark.welcome_msg()
-    username()
+    name = username()
+    gamerules(name)
     
     
-
 main()
 
 

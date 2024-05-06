@@ -27,8 +27,8 @@ def gamerules(user_name):
     To provide and option for the user to see the game rules.
     """
     while True:
-        game_rules = input(f"{user_name}! Should ye want to see the rules, press Y or N, savvy?" )
-        if re.fullmatch(r'[YyNn]', game_rules):
+        game_rules = input(f"{user_name}! Should ye want to see the rules, press Y or N or E to exit, savvy?" )
+        if re.fullmatch(r'[YyNnEe]', game_rules):
             game_rules = game_rules.lower()
         if game_rules == 'y':
             print()
@@ -38,7 +38,20 @@ def gamerules(user_name):
         elif game_rules == 'n':
             print(f"{user_name} Alright, ye scallywags! Let's be shovin' off, shall we?")
             break
-            
+        elif game_rules == 'e':
+            print(f"{user_name}! Arr, ye scallywags, it pains me heart to see ye shove off.But take heart, for I know ye'll be back to join us once more, aye?")
+            break
+
+
+def random_word(words):
+    """
+    This will return a random word from the word list in shark file.
+    """
+    return random.choice(words)
+    
+  
+
+
         
 
 def main():
@@ -48,7 +61,9 @@ def main():
     shark.welcome_msg()
     name = username()
     gamerules(name)
-    
+   
+
+   
     
 main()
 

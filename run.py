@@ -16,7 +16,7 @@ def username():
         user_name = input("Ahoy there, matey! What might be your handle?\nA handle has letters only from 1 to 15 letters.\n ")
               
         if 1 <= len(user_name) <=15 and re.fullmatch(r'^[A-Za-z]+$', user_name):
-            print(f"{user_name}, ye scallywags! Lend us a hand to keep the briny deep safe,\n if ye please.Guess the words right,\n so the shark learns that the kayakers be no vittles for the likes of 'im!\n ")
+            print(shark.correct_name(user_name))
             return user_name
            
         else:
@@ -48,6 +48,9 @@ def random_word(words):
     This will return a random word from the word list in shark file.
     """
     return random.choice(words)
+
+
+
     
   
 
@@ -59,9 +62,9 @@ def main():
     To call all other functions in the game.
     """
     shark.welcome_msg()
-    name = username()
+    name = username()    
     gamerules(name)
-   
+    
 
    
     

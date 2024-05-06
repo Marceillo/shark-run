@@ -113,7 +113,21 @@ the likes of 'im!
 Should ye want to see the rules, press Y or N.                                
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """
+def incorrect_name(user_name): return f"""
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+{user_name}, ye scallywag!                                                 
+Yer handle should be naught but letters, from A to Z, both upper and lower,
+and be no shorter than a single letter and no longer than fifteen,         
+with no other scurvy characters like numbers or symbols or the like!"      
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"""
 
+def exit_msg(user_name): return f"""
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+{user_name}! Arr, ye scallywags, it pains me heart to see ye shove off.
+But take heart, for I know ye'll be back to join us once more, aye?    
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"""
 
 
 def instructions():

@@ -20,8 +20,8 @@ def username():
             return user_name
            
         else:
-            print(f"{user_name}, ye scallywag! Yer handle should be naught but letters, from A to Z, both upper and lower,\n and be no shorter than a single letter and no longer than fifteen,\n with no other scurvy characters like numbers or symbols or the like!")
-            break 
+            print(shark.incorrect_name(user_name))
+            
 def gamerules(user_name):
     """
     To provide and option for the user to see the game rules.
@@ -39,7 +39,7 @@ def gamerules(user_name):
             print(f"{user_name} Alright, ye scallywags! Let's be shovin' off, shall we?")
             break
         elif game_rules == 'e':
-            print(f"{user_name}! Arr, ye scallywags, it pains me heart to see ye shove off.But take heart, for I know ye'll be back to join us once more, aye?")
+            print(shark.exit_msg(user_name))
             break
 
 

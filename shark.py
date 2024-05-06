@@ -107,3 +107,14 @@ def welcome_msg():
 
 print(Fore.RESET)
 
+def instructions():
+  print(Fore.CYAN + r"""
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~                        Instructions                           ~
+~The game is a word-guessing game similar to the Hangman game.  ~
+~All the words are related to sharks and kayak them.            ~
+~You will need to guess each letter of the word.                ~
+~When you get it wrong the shark will get closer to the kayaker.~
+~You have six tries to guess the word.                          ~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+""") 

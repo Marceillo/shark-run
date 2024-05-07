@@ -54,12 +54,15 @@ def guess_word_letter(word):
     """
     For the user to guess the letter of the hidden word with error messages when not correct.
     """
-while True:
-     letter_pattern = r'^[a-z]$'
-     guess_letter = input("Guess a letter: ")
-     if re.match(letter_pattern, guess_letter):
-        print("Aye, that's correct:", {guess_letter})
-     else:
+    
+    while True:
+                        
+        letter_pattern = r'^[a-z]$'
+        guess_letter = input("Guess a letter: ")
+        if re.match(letter_pattern, guess_letter):
+            print("Aye, that's correct:", {guess_letter})
+
+        else:
             print("Nay, matey:", {guess_letter})
             break
    

@@ -9,7 +9,7 @@ import re
 def username():
     """
     The function provides a option for the user to create there name. 
-    This will use regular expresstion to validate ther user name using only letters with a length 1<15.
+    This will use regular exprestion to validate ther user name using only letters with a length 1<15.
     Will print error when false and when True will print start msg. 
     """
     while True:
@@ -40,7 +40,8 @@ def gamerules(user_name):
             break
         elif game_rules == 'e':
             print(shark.exit_msg(user_name))
-            break
+            exit()
+           
 
 
 def random_word():
@@ -52,12 +53,14 @@ def random_word():
 
 def guess_word_letter(word):
     """
-    For the user to guess the letter of the hidden word with error messages when not correct.
+    For the user to guess the a single letter .
     """
-    
+    letter_pattern = r'^[a-z]$'
+    lives = 0
+    max_lives = 6
+    print(word)
     while True:
-                        
-        letter_pattern = r'^[a-z]$'
+        print("_ "*len(word))
         guess_letter = input("Guess a letter: ")
         if re.match(letter_pattern, guess_letter):
             print("Aye, that's correct:", {guess_letter})
@@ -68,11 +71,12 @@ def guess_word_letter(word):
    
 
 # def game_run():
- #   """
- #   This will be the main function.
- #   Provide information as to lives left and art graphics view.
- #   User will guess the letters until completed or until life has been depleted.
- #   """
+    """
+    This will be the main function.
+    Provide information as to lives left and art graphics view.
+    User will guess the letters until completed or until life has been depleted.
+    """
+
     
 
  

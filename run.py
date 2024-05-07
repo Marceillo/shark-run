@@ -27,7 +27,7 @@ def gamerules(user_name):
     To provide and option for the user to see the game rules.
     """
     while True:
-        game_rules = input(f"{user_name}! Should ye want to see the rules, press Y or N or E to exit, savvy?" )
+        game_rules = input(f"{user_name}! Should ye want to see the rules, press Y or N or E to exit, savvy?\n" )
         if re.fullmatch(r'[YyNnEe]', game_rules):
             game_rules = game_rules.lower()
         if game_rules == 'y':
@@ -43,27 +43,47 @@ def gamerules(user_name):
             break
 
 
-def random_word(words):
+def random_word():
     """
     This will return a random word from the word list in shark file.
     """
-    return random.choice(words)
+    return random.choice(shark.words).lower()
 
 
+def guess_word_letter(word):
+    """
+    For the user to guess the letter of the hidden word with error messages when not correct.
+    """
+while True:
+     letter_pattern = r'^[a-z]$'
+     guess_letter = input("Guess a letter: ")
+     if re.match(letter_pattern, guess_letter):
+        print("Aye, that's correct:", {guess_letter})
+     else:
+            print("Nay, matey:", {guess_letter})
+            break
+   
 
+# def game_run():
+ #   """
+ #   This will be the main function.
+ #   Provide information as to lives left and art graphics view.
+ #   User will guess the letters until completed or until life has been depleted.
+ #   """
     
-  
 
-
-        
-
+ 
 def main():
     """
-    To call all other functions in the game.
+    To call all other functions in the game
     """
     shark.welcome_msg()
-    name = username()    
+    name = username()
     gamerules(name)
+    word = random_word()
+    guess_word_letter(word) 
+   
+    
     
 
    

@@ -22,7 +22,7 @@ words = [
     'tails',
 ]
 
-trys_left = [
+tries_left = [
    Fore.CYAN + r'''
         \
           \   O,
@@ -105,13 +105,12 @@ def welcome_msg():
           """)
 
 def correct_name(user_name): return f"""
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 {user_name}, ye scallywags!                                                   
 Lend us a hand to keep the briny deep safe, if ye please.                     
 Guess the words right, so the shark learns that the kayakers be no vittles for
 the likes of 'im!                                                             
-Should ye want to see the rules, press Y or N.                                
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """
 def incorrect_name(user_name): return f"""
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

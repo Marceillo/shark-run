@@ -63,38 +63,41 @@ def guess_word_letter(word):
     guess_correct = []
     letter_word = ['_'] * len(word)
     
+    
     print(word) #remove later for testing
     while True:
         print("_".join(letter_word))
         guess_letter = input("Guess a letter: ").lower()
 
-        while not re.match(letter_pattern, guess_letter) or guess_letter in guessed_letters:
-            if not re.match(letter_pattern, guess_letter):
-                print("Foul value, use alphabet letters only!")
-                break
-                
-        
-            elif guess_letter in guessed_letters:
-                print("Struck a dud, already used pick a fresh letter!")
-                break
+        if not re.match(letter_pattern, guess_letter):
+            print("Foul value, use one alphabet letter only!")
+            continue
+        if guess_letter in guessed_letters:
+            print("Struck a dud, already used pick a fresh letter!")
+            continue
 
         guessed_letters.add(guess_letter)
-        
+                
         print(guessed_letters) # remove later this is for testing    
+        
+        letter_found = False 
+
         # enumerate() method to iterate over char with i stores, index. 
-        if re.match(letter_pattern, guess_letter):
+        if guess_letter in word:
             print(f"Aye, that's correct: {guess_letter}")
             for i, char in enumerate(word):
                 if char == guess_letter:
                     letter_word[i] = guess_letter
+            letter_found = True        
                     
                     
         else:
             print(f"Nay, matey: {guess_letter}")
+           
             
         if "_" not in letter_word:
             #creat image later 
-            print(f"Splendid catch, me hearty! Bravo, well won!\n Your correctly guessed word is {word}" )
+            print(f"Splendid catch, me hearty! Bravo, well won!\n Your correctly guessed word is {word}." )
             break    
    
 

@@ -62,31 +62,40 @@ def guess_word_letter(word):
     guess_wrong = []
     guess_correct = []
     letter_word = ['_'] * len(word)
-    #remove laterk
-    print(word)
+    
+    print(word) #remove later for testing
     while True:
-        print("_ ".join(letter_word))
+        print("_".join(letter_word))
         guess_letter = input("Guess a letter: ").lower()
 
-        if not re.match(letter_pattern, guess_letter):
-            print("Foul value, use alphabet letters!")
+        while not re.match(letter_pattern, guess_letter) or guess_letter in guessed_letters:
+            if not re.match(letter_pattern, guess_letter):
+                print("Foul value, use alphabet letters only!")
+                break
+                
         
-        if guess_letter in guessed_letters:
-            print("Struck a dud, already used pick a fresh letter!")
+            elif guess_letter in guessed_letters:
+                print("Struck a dud, already used pick a fresh letter!")
+                break
 
         guessed_letters.add(guess_letter)
-        # remove later
-        print(guessed_letters)    
-        # enumerate() method to iterate over char with i stores index. 
+        
+        print(guessed_letters) # remove later this is for testing    
+        # enumerate() method to iterate over char with i stores, index. 
         if re.match(letter_pattern, guess_letter):
             print(f"Aye, that's correct: {guess_letter}")
             for i, char in enumerate(word):
                 if char == guess_letter:
                     letter_word[i] = guess_letter
                     
+                    
         else:
-            print("Nay, matey:", {guess_letter})
-            break
+            print(f"Nay, matey: {guess_letter}")
+            
+        if "_" not in letter_word:
+            #creat image later 
+            print(f"Splendid catch, me hearty! Bravo, well won!\n Your correctly guessed word is {word}" )
+            break    
    
 
 # def game_run():
@@ -103,9 +112,9 @@ def main():
     """
     To call all other functions in the game
     """
-    # shark.welcome_msg()
-    # name = username()
-    # gamerules(name)
+    #shark.welcome_msg()
+    #name = username()
+    #gamerules(name)
     word = random_word()
     guess_word_letter(word) 
    

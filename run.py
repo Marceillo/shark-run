@@ -125,9 +125,9 @@ def main():
     """
     To call all other functions in the game
     """
-    #shark.welcome_msg()
-    #name = username()
-    #gamerules(name)
+    shark.welcome_msg()
+    name = username()
+    gamerules(name)
     word = random_word()
     guess_word_letter(word) 
    

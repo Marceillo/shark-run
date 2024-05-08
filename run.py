@@ -58,13 +58,32 @@ def guess_word_letter(word):
     letter_pattern = r'^[a-z]$'
     lives = 0
     max_lives = 6
+    guessed_letters = set()
+    guess_wrong = []
+    guess_correct = []
+    letter_word = ['_'] * len(word)
+    #remove laterk
     print(word)
     while True:
-        print("_ "*len(word))
-        guess_letter = input("Guess a letter: ")
-        if re.match(letter_pattern, guess_letter):
-            print("Aye, that's correct:", {guess_letter})
+        print("_ ".join(letter_word))
+        guess_letter = input("Guess a letter: ").lower()
 
+        if not re.match(letter_pattern, guess_letter):
+            print("Foul value, use alphabet letters!")
+        
+        if guess_letter in guessed_letters:
+            print("Struck a dud, already used pick a fresh letter!")
+
+        guessed_letters.add(guess_letter)
+        # remove later
+        print(guessed_letters)    
+        # enumerate() method to iterate over char with i stores index. 
+        if re.match(letter_pattern, guess_letter):
+            print(f"Aye, that's correct: {guess_letter}")
+            for i, char in enumerate(word):
+                if char == guess_letter:
+                    letter_word[i] = guess_letter
+                    
         else:
             print("Nay, matey:", {guess_letter})
             break
@@ -84,9 +103,9 @@ def main():
     """
     To call all other functions in the game
     """
-    shark.welcome_msg()
-    name = username()
-    gamerules(name)
+    # shark.welcome_msg()
+    # name = username()
+    # gamerules(name)
     word = random_word()
     guess_word_letter(word) 
    

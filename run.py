@@ -56,17 +56,18 @@ def guess_word_letter(word):
     For the user to guess the a single letter .
     """
     letter_pattern = r'^[a-z]$'
-    lives = 0
-    max_lives = 6
     guessed_letters = set()
     guess_wrong = []
     guess_correct = []
     letter_word = ['_'] * len(word)
+    lives = 6
     
-    
+        
     print(word) #remove later for testing
-    while True:
+    while lives > 0:
         print("_".join(letter_word))
+        print(f"Ye have [X] lives left, me hearty! {lives}")
+        print(shark.tries_left[6 - lives])
         guess_letter = input("Guess a letter: ").lower()
 
         if not re.match(letter_pattern, guess_letter):
@@ -93,20 +94,29 @@ def guess_word_letter(word):
                     
         else:
             print(f"Nay, matey: {guess_letter}")
+            lives -= 1
            
             
         if "_" not in letter_word:
             #creat image later 
             print(f"Splendid catch, me hearty! Bravo, well won!\n Your correctly guessed word is {word}." )
             break    
-   
+    if lives == 0:
+        print("Ye be out of luck, matey. Better luck next time!")
 
-# def game_run():
+#def game_run():
     """
     This will be the main function.
     Provide information as to lives left and art graphics view.
     User will guess the letters until completed or until life has been depleted.
     """
+    
+    
+       
+
+
+
+
 
     
 

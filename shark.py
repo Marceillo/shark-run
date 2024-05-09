@@ -130,7 +130,7 @@ But take heart, for I know ye'll be back to join us once more, aye?
 
 
 def instructions():
-  print(Fore.CYAN + r"""
+  print(Fore.GREEN + r"""
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~                        Instructions                           ~
 ~The game is a word-guessing game similar to the Hangman game.  ~
@@ -141,6 +141,40 @@ def instructions():
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """)
 
+def win_msg(word, user_name):
+  print(Fore.CYAN + f"""
+ _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _ 
+(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)
+                                                                  
+             .-'-.                                                   
+           /`     |__                                                
+         /`  _.--`-,-`                                               
+         '-|`   a '<-.   []                                          
+           \     _\__) \=`                                           
+            C_  `    ,_/   Aye, correctly guessed word is {word}.    
+              | ;----'                                               
+                           
+               Splendid {user_name} catch, me hearty! Bravo, well won!          
+ _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)
+""")
+
+def lost_msg(guess_letter, user_name):
+  print(Fore.MAGENTA) + f"""
+ _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _ 
+(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)
+                                                                           
+           .-'-.                                                              
+         /`     |__                                                           
+       /`  _.--`-,-`                                                          
+       '-|`   a '<-.   []                                                     
+         \     _\__) \=`                                                      
+          C_  `    ,_/ Your incorrect guessed letters is {guessed_letters}.   
+            | ;----' Ye be out of luck, {user_name}. Better luck next time!   
+ _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)
+
+"""
 
 print(Fore.RESET)
 

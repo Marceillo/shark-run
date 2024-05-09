@@ -51,7 +51,7 @@ def random_word():
     return random.choice(shark.words).lower()
 
 
-def guess_word_letter(word):
+def guess_word_letter(word, name):
     """
     For the user to guess the a single letter .
     """
@@ -99,7 +99,7 @@ def guess_word_letter(word):
             
         if "_" not in letter_word:
             #creat image later 
-            print(f"Splendid catch, me hearty! Bravo, well won!\n Your correctly guessed word is {word}." )
+            print(shark.win_msg(word, name))
             break    
     if lives == 0:
         print("Ye be out of luck, matey. Better luck next time!")
@@ -110,17 +110,7 @@ def guess_word_letter(word):
     Provide information as to lives left and art graphics view.
     User will guess the letters until completed or until life has been depleted.
     """
-    
-    
-       
-
-
-
-
-
-    
-
- 
+  
 def main():
     """
     To call all other functions in the game
@@ -129,12 +119,7 @@ def main():
     name = username()
     gamerules(name)
     word = random_word()
-    guess_word_letter(word) 
-   
-    
-    
-
-   
+    guess_word_letter(word, name) 
     
 main()
 

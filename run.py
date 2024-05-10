@@ -108,15 +108,31 @@ def guess_word_letter(word, name):
             break    
     if lives == 0:
         print(shark.lost_msg(guessed_letters, name))
-   
+
+
+def restart_shark(word, name):
+    restart = input(f"Arrr, {user_name} would ye play again Y/N?")   
+    if re.fullmatch(r'^[yYnN]$',restart):
+        restart = restart.lower()
+        if restart == 'y':
+            guessed_letters.clear()
+            random_word()
+            guess_word_letter(word, name)
+        elif restart == 'n':
+            print(shark.exit_msg(name))
+            exit()
+
+    else:
+        print("Foul value, Y or N only!")           
+  
   
 def main():
     """
     To call all other functions in the game
     """
-    shark.welcome_msg()
-    name = username()
-    gamerules(name)
+    #shark.welcome_msg()
+    #name = username()
+    #gamerules(name)
     word = random_word()
     guess_word_letter(word, name)
    

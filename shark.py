@@ -142,7 +142,7 @@ def instructions():
 """)
 
 def win_msg(word, user_name):
-  print(Fore.CYAN + f"""
+  print(Fore.GREEN + f"""
  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _ 
 (_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)
                                                                   

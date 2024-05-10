@@ -66,7 +66,7 @@ def guess_word_letter(word, name):
     print(word) #remove later for testing
     while lives > 0:
         print("_".join(letter_word))
-        print(f"Ye have [X] lives left, me hearty! {lives}")
+        print(f"Ye have {lives} lives left, me hearty! ")
         print(shark.tries_left[6 - lives])
         guess_letter = input("Guess a letter: ").lower()
 
@@ -102,7 +102,7 @@ def guess_word_letter(word, name):
             print(shark.win_msg(word, name))
             break    
     if lives == 0:
-        print("Ye be out of luck, matey. Better luck next time!")
+        print(shark.lost_msg(guessed_letters, name))
 
 #def game_run():
     """
@@ -119,7 +119,8 @@ def main():
     name = username()
     gamerules(name)
     word = random_word()
-    guess_word_letter(word, name) 
+    guess_word_letter(word, name)
+   
     
 main()
 

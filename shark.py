@@ -159,8 +159,8 @@ def win_msg(word, user_name):
 (_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)
 """)
 
-def lost_msg(guess_letter, user_name):
-  print(Fore.MAGENTA) + f"""
+def lost_msg(guessed_letters, user_name):
+  print(Fore.CYAN + f"""
  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _ 
 (_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)
                                                                            
@@ -169,12 +169,16 @@ def lost_msg(guess_letter, user_name):
        /`  _.--`-,-`                                                          
        '-|`   a '<-.   []                                                     
          \     _\__) \=`                                                      
-          C_  `    ,_/ Your incorrect guessed letters is {guessed_letters}.   
-            | ;----' Ye be out of luck, {user_name}. Better luck next time!   
+          C_  `    ,_/    
+            | ;----'    
+  Your incorrect guessed letters is\n {guessed_letters}.
+
+  Ye be out of luck, {user_name}. Better luck next time!
+  
  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
 (_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)
 
-"""
+""")
 
 print(Fore.RESET)
 

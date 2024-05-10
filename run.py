@@ -111,6 +111,10 @@ def guess_word_letter(word, name):
 
 
 def restart_shark( name, guessed_letters):
+    """
+    Provides an option to restart the game.
+    The user will press Y to start or N to exit. 
+    """
     while True:
         restart = input(f"Arrr, {name} would ye play again Y/N?")
         if re.fullmatch(r'^[yYnN]$',restart):

@@ -8,9 +8,10 @@ import re
 
 def username():
     """
-    The function provides a option for the user to create there name. 
-    This will use regular exprestion to validate ther user name using only letters with a length 1<15.
-    Will print error when false and when True will print start msg. 
+    The function provides a option for the user to create there name.
+    This will use regular exprestion to validate the username.
+    Using only letters with a length 1 to 15.
+    Will print a error when false and when True will print a message. 
     """
     while True:
         user_name = input("Ahoy there, matey! What might be your handle?\nA handle has letters only from 1 to 15 letters.\n ")
@@ -47,6 +48,9 @@ def gamerules(user_name):
 def random_word():
     """
     This will return a random word from the word list in shark file.
+    This will be the main function.
+    Provide information as to lives left and art graphics view.
+    User will guess the letters until completed or until life has been depleted.
     """
     return random.choice(shark.words).lower()
 
@@ -103,13 +107,7 @@ def guess_word_letter(word, name):
             break    
     if lives == 0:
         print(shark.lost_msg(guessed_letters, name))
-
-#def game_run():
-    """
-    This will be the main function.
-    Provide information as to lives left and art graphics view.
-    User will guess the letters until completed or until life has been depleted.
-    """
+   
   
 def main():
     """

@@ -174,7 +174,6 @@ def lost_msg(guessed_letters, user_name):
   Your incorrect guessed letters is\n {guessed_letters}.
 
   Ye be out of luck, {user_name}. Better luck next time!
-  
  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
 (_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)
 

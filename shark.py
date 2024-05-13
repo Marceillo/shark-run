@@ -141,6 +141,7 @@ def instructions():
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """)
 
+
 def win_msg(word, user_name):
   print(Fore.GREEN + f"""
  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _ 
@@ -161,7 +162,7 @@ def win_msg(word, user_name):
 
 
 def lost_msg(word, guessed_letters, user_name):
-  print(Fore.CYAN + f"""
+  print(Fore.RED + f"""
  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _ 
 (_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)
                                                                            

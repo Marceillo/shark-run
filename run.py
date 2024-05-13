@@ -33,9 +33,8 @@ def gamerules(user_name):
         if re.fullmatch(r'[YyNnEe]', game_rules):
             game_rules = game_rules.lower()
         if game_rules == 'y':
-            print()
             shark.instructions()
-            break
+            continue
             
         elif game_rules == 'n':
             print(f"{user_name} Alright, ye scallywags! Let's be shovin' off, shall we?")

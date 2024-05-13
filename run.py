@@ -126,10 +126,11 @@ def restart_shark( name, guessed_letters):
                 guessed_letters.clear()
                 word = random_word()
                 guess_word_letter( word, guessed_letters)
-                return True
+               
             elif restart == 'n':
                 print(shark.exit_msg(name))
-                return False
+                exit()
+                
     else:
         print("Foul value, Y or N only!")
                 
@@ -142,7 +143,7 @@ def main():
     shark.welcome_msg()
     name = username()
     gamerules(name)
-    guessed_letters = set()
+    guessed_letters = []
     word = random_word()
     guess_word_letter(word, name)
     restart_shark( name, guessed_letters)   

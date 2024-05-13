@@ -53,13 +53,14 @@ def random_word():
     return random.choice(shark.words).lower()
 
 
-def guess_word_letter(word, name, guessed_letters):
+def guess_word_letter( name, guessed_letters):
     """
     For the user to guess the a single letter.
     This will be the main function.
     Provide information as to lives left and art graphics view.
     User will guess the letters until completed or until life has been depleted.
     """
+    word = random_word()
     letter_pattern = r'^[a-z]$'
     guessed_letters = set()
     guess_wrong = []
@@ -125,7 +126,7 @@ def restart_shark( name, guessed_letters):
                 print(f" Splendid {name}")
                 guessed_letters.clear()
                 word = random_word()
-                guess_word_letter( word, name, guessed_letters)
+                guess_word_letter(name, guessed_letters)
                
             elif restart == 'n':
                 shark.exit_msg(name)
@@ -144,8 +145,7 @@ def main():
     name = username()
     gamerules(name)
     guessed_letters = []
-    word = random_word()
-    guess_word_letter(word, name, guessed_letters)
+    guess_word_letter(name, guessed_letters)
     restart_shark( name, guessed_letters)   
     
 main()

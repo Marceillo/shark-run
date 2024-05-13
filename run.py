@@ -26,7 +26,7 @@ def username():
 def gamerules(name):
     """
     To ask the user the user if they would like to see the rules.
-    If yes to prin the rules to the consol. 
+    If yes to print the rules to the consol. 
     """
     while True:
         game_rules = input(f"{name}! Should ye want to see the rules, press Y or N or E to exit, savvy?\n" )
@@ -37,7 +37,7 @@ def gamerules(name):
             continue
             
         elif game_rules == 'n':
-            print(f"{user_name} Alright, ye scallywags! Let's be shovin' off, shall we?")
+            print(f"{name} Alright, ye scallywags! Let's be shovin' off, shall we?")
             break
         elif game_rules == 'e':
             shark.exit_msg(name)
@@ -129,7 +129,7 @@ def restart_shark( name, guessed_letters):
                
             elif restart == 'n':
                 shark.exit_msg(name)
-                exit()
+                exit(main())
                 
     else:
         print("Foul value, Y or N only!")

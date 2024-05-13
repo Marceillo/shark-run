@@ -23,13 +23,13 @@ def username():
         else:
             print(shark.incorrect_name(user_name))
             
-def gamerules(user_name):
+def gamerules(name):
     """
     To ask the user the user if they would like to see the rules.
     If yes to prin the rules to the consol. 
     """
     while True:
-        game_rules = input(f"{user_name}! Should ye want to see the rules, press Y or N or E to exit, savvy?\n" )
+        game_rules = input(f"{name}! Should ye want to see the rules, press Y or N or E to exit, savvy?\n" )
         if re.fullmatch(r'[YyNnEe]', game_rules):
             game_rules = game_rules.lower()
         if game_rules == 'y':
@@ -40,7 +40,7 @@ def gamerules(user_name):
             print(f"{user_name} Alright, ye scallywags! Let's be shovin' off, shall we?")
             break
         elif game_rules == 'e':
-            print(shark.exit_msg(user_name))
+            shark.exit_msg(name)
             exit()
            
 

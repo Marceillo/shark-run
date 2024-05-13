@@ -113,12 +113,13 @@ with no other scurvy characters like numbers or symbols or the like!"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """
 
-def exit_msg(user_name): return f"""
+def exit_msg(user_name):
+  print( f"""
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 {user_name}! Arr, ye scallywags, it pains me heart to see ye shove off.
 But take heart, for I know ye'll be back to join us once more, aye?    
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-"""
+""")
 
 
 def instructions():

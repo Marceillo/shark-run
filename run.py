@@ -66,14 +66,14 @@ def guess_word_letter(word, name):
     guess_correct = []
     letter_word = ['_'] * len(word)
     lives = 6
-    
+    letter_found = False 
         
     print(word) #remove later for testing
     while lives > 0:
         print("_".join(letter_word))
         print(f"Ye have {lives} lives left, me hearty! ")
         print(shark.tries_left[6 - lives])
-        guess_letter = input("Guess a letter: ").lower()
+        guess_letter = input("Guess a letter:\n ").lower()
 
         if not re.match(letter_pattern, guess_letter):
             print("Foul value, use one alphabet letter only!")
@@ -86,7 +86,7 @@ def guess_word_letter(word, name):
                 
         print(guessed_letters) # remove later this is for testing    
         
-        letter_found = False 
+        
 
         # enumerate() method to iterate over char with i stores, index. 
         if guess_letter in word:
@@ -94,12 +94,14 @@ def guess_word_letter(word, name):
             for i, char in enumerate(word):
                 if char == guess_letter:
                     letter_word[i] = guess_letter
-            letter_found = True        
+                    letter_found = True        
                     
                     
         else:
             print(f"Nay, matey: {guess_letter}")
             lives -= 1
+            letter_found = False 
+            
            
             
         if "_" not in letter_word:
@@ -116,20 +118,21 @@ def restart_shark( name, guessed_letters):
     The user will press Y to start or N to exit. 
     """
     while True:
-        restart = input(f"Arrr, {name} would ye play again Y/N?")
+        restart = input(f"Arrr, {name} would ye play again Y/N?\n")
         if re.fullmatch(r'^[yYnN]$',restart):
             restart = restart.lower()
             if restart == 'y':
-                print(f" Splendid {name}") #maybe art remove later
+                print(f" Splendid {name}")
                 guessed_letters.clear()
                 word = random_word()
                 guess_word_letter( word, guessed_letters)
+                return True
             elif restart == 'n':
                 print(shark.exit_msg(name))
-                exit()
-
+                return False
     else:
-        print("Foul value, Y or N only!")           
+        print("Foul value, Y or N only!")
+                
   
   
 def main():
@@ -139,7 +142,7 @@ def main():
     shark.welcome_msg()
     name = username()
     gamerules(name)
-    guessed_letters = []
+    guessed_letters = set()
     word = random_word()
     guess_word_letter(word, name)
     restart_shark( name, guessed_letters)   

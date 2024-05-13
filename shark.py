@@ -159,6 +159,7 @@ def win_msg(word, user_name):
 (_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)
 """)
 
+
 def lost_msg(guessed_letters, user_name):
   print(Fore.CYAN + f"""
  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _ 

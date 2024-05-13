@@ -160,7 +160,7 @@ def win_msg(word, user_name):
 """)
 
 
-def lost_msg(guessed_letters, user_name):
+def lost_msg(word, guessed_letters, user_name):
   print(Fore.CYAN + f"""
  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _ 
 (_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)
@@ -171,7 +171,8 @@ def lost_msg(guessed_letters, user_name):
        '-|`   a '<-.   []                                                     
          \     _\__) \=`                                                      
           C_  `    ,_/    
-            | ;----'    
+            | ;----'   
+  Arr! the correct word is {word}.             
   Your incorrect guessed letters is\n {guessed_letters}.
 
   Ye be out of luck, {user_name}. Better luck next time!

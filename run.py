@@ -106,11 +106,11 @@ def guess_word_letter( name, guessed_letters):
            
             
         if "_" not in letter_word:
-            #creat image later 
+             
             shark.win_msg(word, name)
             break    
     if lives == 0:
-        shark.lost_msg(guessed_letters, name)
+        shark.lost_msg(word, guessed_letters, name)
 
 
 def restart_shark( name, guessed_letters):

@@ -177,3 +177,6 @@ def lost_msg(word, guessed_letters, user_name):
 
 print(Fore.RESET)
 
+
+
+

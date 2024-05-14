@@ -64,13 +64,13 @@ def guess_word_letter( name, guessed_letters):
     guessed_letters = set()
     guess_wrong = []
     guess_correct = []
-    letter_word = ['_'] * len(word)
+    letter_word = ['_'] * len(set(word))
     lives = 6
     letter_found = False 
         
     print(word) #remove later for testing
     while lives > 0:
-        print("_".join(letter_word))
+        print(' '.join(letter_word))
         print(f"Ye have {lives} lives left, me hearty! ")
         print(shark.tries_left[6 - lives])
         guess_letter = input("Guess a letter:\n ").lower()
@@ -105,7 +105,7 @@ def guess_word_letter( name, guessed_letters):
            
             
         if "_" not in letter_word:
-             
+            print(' '.join(letter_word))
             shark.win_msg(word, name)
             break    
     if lives == 0:
@@ -128,8 +128,8 @@ def restart_shark( name, guessed_letters):
                 guess_word_letter(name, guessed_letters)
                
             elif restart == 'n':
-                shark.exit_msg(name)
-                exit(main())
+                print(f"Arr, {name}! Should ye want to paddle again?\n Press run program.\n")
+                exit()
                 
     else:
         print("Foul value, Y or N only!")

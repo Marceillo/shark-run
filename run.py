@@ -17,6 +17,7 @@ def username():
     while True:
         time.sleep(4)
         shark.clear_screen()
+        print()
         user_name = input("Ahoy there, matey! What might be your handle?\nA handle has letters only from 1 to 15 letters.\n ")
               
         if 1 <= len(user_name) <=15 and re.fullmatch(r'^[A-Za-z]+$', user_name):
@@ -75,12 +76,13 @@ def guess_word_letter( name, guessed_letters):
     lives = 6
     letter_found = False 
         
-    print(word) #remove later for testing
+    print(word) #nfor testing when needed
     while lives > 0:
         print(' '.join(letter_word))
         print(f"Ye have {lives} lives left, me hearty! ")
         print(shark.tries_left[6 - lives])
         guess_letter = input("Guess a letter:\n ").lower()
+        shark.clear_screen()
 
         if not re.match(letter_pattern, guess_letter):
             print("Foul value, use one alphabet letter only!")
@@ -90,8 +92,7 @@ def guess_word_letter( name, guessed_letters):
             continue
 
         guessed_letters.add(guess_letter)
-                
-        #print(guessed_letters) # remove later this is for testing    
+        print(guessed_letters)     
         
         
 
@@ -126,6 +127,7 @@ def restart_shark( name, guessed_letters):
     """
     while True:
         restart = input(f"Arrr, {name} would ye play again Y/N?\n")
+        shark.clear_screen()
         if re.fullmatch(r'^[yYnN]$',restart):
             restart = restart.lower()
             if restart == 'y':

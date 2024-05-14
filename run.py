@@ -72,7 +72,7 @@ def guess_word_letter( name, guessed_letters):
     guessed_letters = set()
     guess_wrong = []
     guess_correct = []
-    letter_word = ['_'] * len(set(word))
+    letter_word = ['_'] * len(word)
     lives = 6
     letter_found = False 
         

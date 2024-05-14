@@ -4,6 +4,7 @@
 import shark
 import random
 import re
+import time
 
 
 def username():
@@ -14,10 +15,14 @@ def username():
     Will print a error when false and when True will print a message. 
     """
     while True:
+        time.sleep(4)
+        shark.clear_screen()
         user_name = input("Ahoy there, matey! What might be your handle?\nA handle has letters only from 1 to 15 letters.\n ")
               
         if 1 <= len(user_name) <=15 and re.fullmatch(r'^[A-Za-z]+$', user_name):
             print(shark.correct_name(user_name))
+            time.sleep(8)
+            shark.clear_screen()
             return user_name
            
         else:
@@ -38,6 +43,8 @@ def gamerules(name):
             
         elif game_rules == 'n':
             print(f"{name} Alright, ye scallywags! Let's be shovin' off, shall we?")
+            time.sleep(3)
+            shark.clear_screen()
             break
         elif game_rules == 'e':
             shark.exit_msg(name)

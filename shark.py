@@ -1,4 +1,7 @@
 from colorama import Fore
+import os
+import time
+
 words = [
     'kayak',
     'shark',
@@ -94,7 +97,8 @@ def welcome_msg():
 ~ ___) | | | | (_| | |  |   <  |  _ <| |_| | | | |              ~
 ~|____/|_| |_|\__,_|_|  |_|\_\ |_| \_\\__,_|_| |_|              ~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-""",)
+""")
+
 
 def correct_name(user_name): return f"""
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -177,6 +181,9 @@ def lost_msg(word, guessed_letters, user_name):
 
 print(Fore.RESET)
 
+
+def clear_screen():
+  os.system('cls' if os.name == 'nt' else 'clear')
 
 
 

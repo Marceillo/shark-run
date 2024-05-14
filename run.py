@@ -43,7 +43,7 @@ def gamerules(name):
             
         elif game_rules == 'n':
             print(f"{name} Alright, ye scallywags! Let's be shovin' off, shall we?")
-            time.sleep(3)
+            time.sleep(5)
             shark.clear_screen()
             break
         elif game_rules == 'e':

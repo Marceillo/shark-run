@@ -3,11 +3,11 @@
 Welcome to Shark-Run live program [Shark-Run](https://shark-run-e1a617839e7e.herokuapp.com/).
 
 The game is a word guessing game similar to the old hangman game.
-Only in this game you have a kayaker and a shark trying to both educate each other.
-The reality we should learn to live in the same world with each other.
+Only in this game you have a kayaker and a shark chasing the kayaker.
+The reality we should learn to live in the same world with each other and learn from each other.
 The dictionery words are based on the shark and kayak words.
 
-![Responsive Mockup](assets/images/responsive-mockup.png)
+![Welcome](gallery/welcome-message.png)
 
 
 # Contents

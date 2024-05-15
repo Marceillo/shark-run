@@ -15,19 +15,20 @@ def username():
     Will print a error when false and when True will print a message. 
     """
     while True:
-        time.sleep(4)
-        shark.clear_screen()
+       
         print()
         user_name = input("Ahoy there, matey! What might be your handle?\nA handle has letters only from 1 to 15 letters.\n ")
               
         if 1 <= len(user_name) <=15 and re.fullmatch(r'^[A-Za-z]+$', user_name):
             print(shark.correct_name(user_name))
-            time.sleep(8)
-            shark.clear_screen()
+
             return user_name
            
         else:
             print(shark.incorrect_name(user_name))
+            
+
+            
             
 def gamerules(name):
     """
@@ -35,19 +36,25 @@ def gamerules(name):
     If yes to print the rules to the consol. 
     """
     while True:
-        game_rules = input(f"{name}! Should ye want to see the rules, press Y or N or E to exit, savvy?\n" )
+        game_rules = input(f"{name}! Should ye want to see the rules:\n"
+                            "Press Y too see rules.\n"
+                            "Press N not too see the rules and start the game.\n"
+                            "Press E too exit, savvy?\n")
         if re.fullmatch(r'[YyNnEe]', game_rules):
             game_rules = game_rules.lower()
         if game_rules == 'y':
+            shark.clear_screen()
             shark.instructions()
+
             continue
             
         elif game_rules == 'n':
             print(f"{name} Alright, ye scallywags! Let's be shovin' off, shall we?")
-            time.sleep(5)
+            time.sleep(4)
             shark.clear_screen()
             break
         elif game_rules == 'e':
+            shark.clear_screen()
             shark.exit_msg(name)
             exit()
            

@@ -54,7 +54,7 @@ The dictionary words are based on the shark and kayak words.
 - I used some of the colors provided by Colorama (RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE)
 - For this game, I chose CYAN as it is the closer color to the ocean for the start of the game.
 - Other colors were YELLOW and RED to signify to the user the shark is getting closer with each incorrect answer.
-- GREEN was used for these instructions and when you win the game. 
+- GREEN was used for the instructions and when you win the game. 
 
 
 ## How to play
@@ -76,6 +76,7 @@ The dictionary words are based on the shark and kayak words.
 #### Inspiration
 
 - I wanted somthing differant that matches my interests and hobbys.
+- One of my hobbys is kayaking this is where I got the insperation to make this game.
   
 #### Future Features
 
@@ -87,7 +88,9 @@ The dictionary words are based on the shark and kayak words.
 
 - [Gitpod](https://www.gitpod.io/#get-started) - used to deploy the website.
 - [Github](https://github.com/) - used to host and edit the website.
-- [Am I responsive](https://ui.dev/amiresponsive) - This tool tests the site's responsiveness and provides an image used at the beginning of the document. 
+- [perplexity](https://www.perplexity.ai/) - This was used for the dictionery and the Nautical language used in the game.
+- [PEP8ci](https://pep8ci.herokuapp.com/#) - This was used check for errors or industry standard code is correct.
+- [Heruku](https://id.heroku.com/login) - THis is used to host my game consol for others to use.
 
   
 ## Testing 

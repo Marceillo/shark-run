@@ -175,6 +175,10 @@ The dictionary words are based on the shark and kayak words.
 
 ![Not correct letter in wword](gallery/incorrect-guessed-letter.png)
 
+- If the user types the same letter again a message will be printed.
+
+![Duplicate entry](gallery/duplicate-guessed-letter.png)
+
 #### Win Message
 
 - The win message prints an art image with the username and congratulates the user 

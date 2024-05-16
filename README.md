@@ -33,16 +33,35 @@ The dictionary words are based on the shark and kayak words.
 # User Experience
 
 ## User Stories
+
+- The user should have a simplistic feel, so that the game is easy to follow and understand.
+- The old sailer language used might be different for some users but as they go along it comes to be very simple.
+- The goal was to add something differant with some humour with a good visual experiences for the user.
+
 ### Primary Goal 
+
+- The main gaol is to have a bit of fun guessing the letters of the words.
+
 ### Visitor Goal
+
+- The visitor should easly run the program and play the game.
+- Winning or loosing is not really the goal only enjoying the game.
 
 ## Creation Process
 ### Planning
+
+- I knew I was going to do a word-guessing game similar to a hangman game.
+- So I took time to think about the visual experience with some brainstorming.
+- I came up with a kayaker being chased by a shark as kayaking is a hobby of mine and I love the ocean including sharks.
+- So once the idea was hatched searched words for the dictionary and images for the helper file.
+- Then once most of the rough ideas was there I needed a tool to structure things this is why I used a flow chart.
+
 ### Flow chart 
 
 - The flow chart was the start of this project to make a rough idea of how the game is going to work.
-- It helped organize what section to do first and what was next to do
+- It helped to organize what section to do first and what was next inline.
 - It created a structure of which function should start and where to end.
+- Before moving to the next section I corrected error messages and problems then moved on to the next step.
 
 ![Flow chart](gallery/flow_chart.png)
   
@@ -50,18 +69,17 @@ The dictionary words are based on the shark and kayak words.
 
 - The app is built in a display window of 80 characters per line and a max of 24 
   lines.
-- dependencies  requirements.txt
+- dependencies are added to the requirements.txt.
 - I wanted the game to flow from one function to the next in the  Python language.
 - I created a helper file called shark as this helped to keep the code easy to read in the main code file.
 - The helper file also keeps all the art and added functions, to a minimum in the main code.
 - This makes for easier implementation and error handling.
 - The language used is an old sailer nautical language as it fits with them and is different.
-- It might be a little strange language for some to understand at first but it makes sense as you go along with it.
 - after the welcome message the player has an opportunity to insert a player name or username for a better word.
 - Certain message have asciiart as this personilized the experience with often the username displayed and information in others.
-- The asciiart also plays also a role in displaying an color changin image indicating to the user that they are reaching critical life 
+- The asciiart also plays also a role in displaying an color changing image indicating to the user that they are reaching critical life 
   levels.
-- Implemented error message should they have used the incorrect value.   
+- Implemented error message should they have used the incorrect value or correct value.  
   
 ## Colour used from colorama  
 
@@ -87,12 +105,72 @@ The dictionary words are based on the shark and kayak words.
 
 ### Existing Features
 
-- Plain 
+#### Welcome Message 
+
+- To make the user feel welcome to play and have fun.
+
+![Welcome](gallery/welcome-message.png)
+
+#### Username input.
+
+- This feature checks that the username is 1-15 characters. 
+- Using regular exprestion code that will check that its only alphabet letters from aA-zZ only.
+- When correct the below message with show:)
+
+![Correct-Username](gallery/correct-username.png)
+
+- Should you use any other characters, numbers or anything else except alphabet letters will be seen as incorrect.
+- An error message will print indicating what is required and you will need to enter it again:(
+
+![Incorrect-Username](gallery/incorrect-username.png)
+
+#### Game rules 
+
+- This allows the user to choose if they want to see instructions or not.
+- When the user presses yY it will print the message below.
+
+![Instructions](gallery/instructions.png)
+
+- when the user says nN then it will also print a message and then start the game.
+
+![Instructions](gallery/message-start.png)
+
+- Once they have seen the instructions and want to exit they can do so, this provides two exit points.
+- One would be at the start of the game and one at the end of the game as the message gets printed.
+
+![Exit-message](gallery/exit-message.png)
+
+#### Game Start 
+
+- Finally, we start the game after the letter N was selected.
+- First, a random word is selected from a dictionary code to display the length of the word with underscores.
+- Guessed letters are displayed on top  
+- An image of a shark chasing a kayaker appears.
+- There are three colors in the six lives you have, each changing after every second life taken.
+- The shark gets closer to your kayak with each word guessed incorrectly as seen below.
+
+##### Lives 6 - 5
+
+![Lives 6 - 5](gallery/correct-level-12.png)
+
+##### lives 4 - 3
+
+![lives 4 - 3](gallery/correct-level-34.png)
+
+##### lives 2 - 1
+
+![lives 2 - 1](gallery/correct-level-46.png)
+
+#### Error handeling 
+
+- When the user uses incorrect values a message is printed.
+
+![lives 2 - 1](gallery/correct-level-46.png)
 
 #### Inspiration
 
 - I wanted somthing differant that matches my interests and hobbys.
-- One of my hobbys is kayaking this is where I got the insperation to make this game.
+- One of my hobbys is kayaking and this is where I got the insperation to make this game my own.
   
 #### Future Features
 

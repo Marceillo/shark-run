@@ -102,35 +102,37 @@ def welcome_msg():
     clear_screen()
 
 
-
 def correct_name(user_name): return f"""
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-{user_name}, ye scallywags!                                                   
-Lend us a hand to keep the briny deep safe, if ye please.                     
+{user_name}, ye scallywags!
+end us a hand to keep the briny deep safe, if ye please.
 Guess the words right, so the shark learns that the kayakers be no vittles for
-the likes of 'im!                                                             
+the likes of 'im!
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """
+
+
 def incorrect_name(user_name): return f"""
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-{user_name}, ye scallywag!                                                 
+{user_name}, ye scallywag!
 Yer handle should be naught but letters, from A to Z, both upper and lower,
-and be no shorter than a single letter and no longer than fifteen,         
-with no other scurvy characters like numbers or symbols or the like!"      
+and be no shorter than a single letter and no longer than fifteen,
+with no other scurvy characters like numbers or symbols or the like!
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """
 
+
 def exit_msg(user_name):
-  print( f"""
+    print(f"""
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 {user_name}! Arr, ye scallywags, it pains me heart to see ye shove off.
-But take heart, for I know ye'll be back to join us once more, aye?    
+But take heart, for I know ye'll be back to join us once more, aye?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """)
 
 
 def instructions():
-  print(Fore.GREEN + r"""
+    print(Fore.GREEN + r"""
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~                        Instructions                           ~
 ~The game is a word-guessing game similar to the Hangman game.  ~
@@ -143,50 +145,48 @@ def instructions():
 
 
 def win_msg(word, user_name):
-  print(Fore.GREEN + f"""
- _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _ 
+    print(Fore.GREEN + rf"""
+ _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
 (_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)
-                                                                  
-             .-'-.                                                   
-           /`     |__                                                
-         /`  _.--`-,-`                                               
-         '-|`   a '<-.   []                                          
-           \     _\__) \=`                                           
-            C_  `    ,_/   Aye, correctly guessed word is {word}.    
-              | ;----'                                               
-                           
-               Splendid {user_name} catch, me hearty! Bravo, well won!          
+
+             .-'-.
+           /`     |__
+         /`  _.--`-,-`
+         '-|`   a '<-.   []
+           \     _\__) \=`
+            C_  `    ,_/   Aye, correctly guessed word is {word}.
+              | ;----'
+
+               Splendid {user_name} catch, me hearty! Bravo, well won!
  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
 (_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)
 """)
 
 
 def lost_msg(word, guessed_letters, user_name):
-  print(Fore.RED + f"""
- _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _ 
-(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)
-                                                                           
-           .-'-.                                                              
-         /`     |__                                                           
-       /`  _.--`-,-`                                                          
-       '-|`   a '<-.   []                                                     
-         \     _\__) \=`                                                      
-          C_  `    ,_/    
-            | ;----'   
-  Arr! the correct word is {word}.             
+    print(Fore.RED + rf"""
+ _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)
+
+           .-'-.
+         /`     |__
+       /`  _.--`-,-`
+       '-|`   a '<-.   []
+         \     _\__) \=`
+          C_  `    ,_/
+            | ;----'
+  Arr! the correct word is {word}.
   Your incorrect guessed letters is\n {guessed_letters}.
 
   Ye be out of luck, {user_name}. Better luck next time!
- _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
-(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)
-
+ _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _  _
+(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)(_)
 """)
+
 
 print(Fore.RESET)
 
 
+# Used code from www.geeksforgeeks.org and https://stackoverflow.com/
 def clear_screen():
-  os.system('cls' if os.name == 'nt' else 'clear')
-
-
-
+    os.system('cls' if os.name == 'nt' else 'clear')

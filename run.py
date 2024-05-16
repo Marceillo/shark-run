@@ -20,6 +20,7 @@ def username():
             print(shark.correct_name(user_name))
             return user_name
         else:
+            shark.clear_screen()
             print(shark.incorrect_name(user_name))
 
 

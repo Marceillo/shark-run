@@ -163,9 +163,35 @@ The dictionary words are based on the shark and kayak words.
 
 #### Error handeling 
 
-- When the user uses incorrect values a message is printed.
+- When correctly guessed letter a message below is printed.
 
-![lives 2 - 1](gallery/correct-level-46.png)
+![Correctly guessed letter](gallery/correct-guessed-letter.png)
+
+- When the user uses incorrect values that are not letters a message will be printed.
+
+![Not Alphabet letters](gallery/incrorrectguessed-not-letters.png)
+
+- If letter is not in the word the message below will be printed.
+
+![Not correct letter in wword](gallery/incorrect-guessed-letter.png)
+
+#### Win Message
+- The win message prints a art image with the username and congratulates the user 
+
+![Win message](gallery/correctly-guessed.png)
+
+
+#### loose Message 
+
+- When the user looses prints a message.
+
+![Loose message](gallery/loose-message.png)
+
+#### Restart option 
+
+- After each win or loose message the user is given the option to play again or not.
+
+![Restart](gallery/message-play-again%20.png)
 
 #### Inspiration
 

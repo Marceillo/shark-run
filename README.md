@@ -234,15 +234,21 @@ The dictionary words are based on the shark and kayak words.
 
 ### Manual Testing
 
+- I tested the app in the console many times and later after deploying it in the Heruku app.
+- After deploment I tested with one persone then two and increased the amount of people who do not play games.
+  - Reason being I wanted to see what the experience was and the feedback was mainly good.
+  - Also they where good to test with as they do not play often so nice to see if they get along with the game and they did.
+  - I also tested with gamers and they liked it as well of course there expectations are higher in terms of graphics. 
+
 ### Validator Testing
 
 - The code was checked using the CI Python Linter all errors were corrected and cleared.
 
-#### Run.py 
+#### Run.py cleared errors
 
 - ![Pep8ci](gallery/cleared-pip8-run.png)
 
-##### Errors
+##### Errors found
 
 - Errors found and repaired 
 
@@ -253,19 +259,33 @@ The dictionary words are based on the shark and kayak words.
 
 
            
-#### Shark.py
+#### Shark.py cleared errors
 
 - ![Pep8ci](gallery/clear-shark-pep8.png)
 
-   
+##### Errors found   
+
+- Errors found and repaired 
+
+- [Error-shark-1-Pep8ci](gallery/shark-1.png)
+- [Error-shark-2-Pep8ci](gallery/shark-2.png)
+- [Error-shark-3-Pep8ci](gallery/shark-3.png)
 
 ### Fixed Bugs
 
-- game problems 
+- I had a typeErrors as my function in shark.py did not pass the correct argumewnts to the run.py . example of this type of errors where (TypeError: input expected at most 1 argument, got 2).
+  - This was repaired by passing the correct arrguments to each file so when called there is no error.
+  - Throught the project I often had to ensure that the functions are called properly from the main function and in the code.
+- In the guess-word-letter function was not printing the correct underscores for the word and was confusing for other players.
+  - To correct this I found that my print command in the function was incorrect so the code was changed to this code: print(' '.join(letter_word)).
+- I had art messages and because of the graphis in them they had \ this created errors in python the solution was to use the r and f string prefixes together.
+  - This enabled me to keep the graphics as is and call data in the message such as a username for example.
+
+- I have to say there where other bugs that I just can not remember as I went on fixing them from one line of code to the next.
 
 ### Unfixed Bugs
  
-- Unfixed bugs 
+- There are no unfixed bugs that I are known to me in this app.
 
 [Back to top](#contents)
 

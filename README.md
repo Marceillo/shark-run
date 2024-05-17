@@ -297,7 +297,7 @@ The dictionary words are based on the shark and kayak words.
 
 ### Unfixed Bugs
  
-- There are no unfixed bugs that I are known to me in this app.
+- There are no unfixed bugs that are known to me in this app.
 
 [Back to top](#contents)
 

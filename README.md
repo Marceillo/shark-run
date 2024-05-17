@@ -246,10 +246,10 @@ The dictionary words are based on the shark and kayak words.
 
 - Errors found and repaired 
 
-[Pep8ci](gallery/error-1-run.png)
-[Pep8ci](gallery/error-2-run.png)
-[Pep8ci](gallery/error-3-run.png)
-[Pep8ci](gallery/error-4-run.png)
+- [Error-1-Pep8ci](gallery/error-1-run.png)
+- [Error-2-Pep8ci](gallery/error-2-run.png)
+- [Error-3-Pep8ci](gallery/error-3-run.png)
+- [Error-4-Pep8ci](gallery/error-4-run.png)
 
 
            

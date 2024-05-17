@@ -187,6 +187,6 @@ def lost_msg(word, guessed_letters, user_name):
 print(Fore.RESET)
 
 
-# Used code from www.geeksforgeeks.org and https://stackoverflow.com/
+# Used code from www.geeksforgeeks.org and https://stackoverflow.com/questions/2084508/clear-the-terminal-in-python
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')

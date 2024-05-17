@@ -55,6 +55,9 @@ The dictionary words are based on the shark and kayak words.
 - I came up with a kayaker being chased by a shark as kayaking is a hobby of mine and I love the ocean including sharks.
 - So once the idea was hatched searched words for the dictionary and images for the helper file.
 - Then once most of the rough ideas were there I needed a tool to structure things this is why I used a flow chart.
+- Programming in Python was really nice and had a natural feeling to it the love-sanwidtches were enouph to help with my code.
+- I generally wrote one function then tested it and fixed or added code to this function before moving to the next function.
+- All the preparation before helped starting to code really helped me in the writing the code.
 
 ### Flow chart 
 
@@ -205,9 +208,17 @@ The dictionary words are based on the shark and kayak words.
   
 #### Future Features
 
- - Function 
+- I would add more words to the dictionary separating them into easy, hard, and difficult.
+  It would have been great also to supply a hint for each word to guess.
+- Some players would have liked to select the difficulty of the game in this case would make the lives less for each level.
+- Some players like a score count that they can improve as they go along this might be another future feature.  
  
 ## Data Model
+
+- The game is built on functions in the game and no external API is used.
+- I have two -py files one that runs the game and the other that contains the helper files such as art or functions.
+- Certain python packages have been used as indicated below technologies used.
+- Heruku is an automatic deploy so any changes to the file update Heruku automatically.  
    
 ## Technologies Used
 
@@ -235,10 +246,10 @@ The dictionary words are based on the shark and kayak words.
 ### Manual Testing
 
 - I tested the app in the console many times and later after deploying it in the Heruku app.
-- After deploment I tested with one persone then two and increased the amount of people who do not play games.
-  - Reason being I wanted to see what the experience was and the feedback was mainly good.
-  - Also they where good to test with as they do not play often so nice to see if they get along with the game and they did.
-  - I also tested with gamers and they liked it as well of course there expectations are higher in terms of graphics. 
+- After the deployment I tested with one person then two and increased the amount of people who do not play games.
+  - The reason was that I wanted to see what the experience was and the feedback was mainly good.
+  - Also they were good to test with as they do not play often so nice to see if they got along with the game and they did.
+  - I also tested it with gamers and they liked it as well of course their expectations are higher in terms of graphics. 
 
 ### Validator Testing
 
@@ -273,15 +284,16 @@ The dictionary words are based on the shark and kayak words.
 
 ### Fixed Bugs
 
-- I had a typeErrors as my function in shark.py did not pass the correct argumewnts to the run.py . example of this type of errors where (TypeError: input expected at most 1 argument, got 2).
-  - This was repaired by passing the correct arrguments to each file so when called there is no error.
-  - Throught the project I often had to ensure that the functions are called properly from the main function and in the code.
+- The game is built on functions in the game and no external API is used.
+- I had a typeErrors as my function in shark.py did not pass the correct arguments to the run.py.
+  - An example of this type of error where (TypeError: input expected at most 1 argument, got 2).
+  - This was repaired by passing the correct arguments to each file so when called there is no error.
+  - Throughout the project, I often had to ensure that the functions were called properly from the main function and in the code.
 - In the guess-word-letter function was not printing the correct underscores for the word and was confusing for other players.
-  - To correct this I found that my print command in the function was incorrect so the code was changed to this code: print(' '.join(letter_word)).
-- I had art messages and because of the graphis in them they had \ this created errors in python the solution was to use the r and f string prefixes together.
-  - This enabled me to keep the graphics as is and call data in the message such as a username for example.
-
-- I have to say there where other bugs that I just can not remember as I went on fixing them from one line of code to the next.
+  - To correct this I found that my print command in the function was incorrect so the code was changed to this code: print(' '.join(letter_word)).
+- I had art messages and because of the graphics in them they had \ this created errors in Python the solution was to use the r and f string prefixes together.
+  - This enabled me to keep the graphics as is and call data in the message such as a username for example.
+- I have to say there were other bugs that I just can not remember as I went on fixing them from one line of code to the next.
 
 ### Unfixed Bugs
  
@@ -307,18 +319,25 @@ The instruction link below on how to clone a project:
 
 - [W3schools](https://www.w3schools.com/)
 - [Stackoverflow](https://stackoverflow.com/)
-- [Youtube](youtube.com)
 - [W3docs](https://www.w3docs.com/)
+- [python.org](https://docs.python.org/3/library/re.html)
+- [geeksforgeeks](https://www.geeksforgeeks.org/clear-screen-python/)
+
 
 ### Content
 
+- [perplexity](https://www.perplexity.ai) Used for the sailer language and dictionery words.
+
 ### Media
 
-
+- [Youtube](youtube.com) Used to for research on coding in python.
 
 ## Acknowledgements
 
-- I would like to thank my fellow student Sebastian Kefer for providing good troubleshooting ideas when I was stuck on bugs or problems it is nice to have support in these times.
+- I would like to thank my fellow student Sebastian K for providing good troubleshooting ideas when I was stuck on bugs or problems it is nice to have support in 
+  these times.
+- Also a special mention to Jan R my fellow student for helping with the testing of the app as he gave me valuable insight into the game.
+- To all family and friends who also tested the app thank you.
 - Thank you to my mentor who has helped guide me in this project.
 
 [Back to top](#contents)   

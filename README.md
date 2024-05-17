@@ -11,7 +11,7 @@ The dictionary words are based on the shark and kayak words.
 
 
 # Contents
-* [Shark.Run](#shark-run)
+* [Shark-Run](#shark-run)
 * [User Experience](#user-experience)
   * [User Stories](#user-stories)
   * [Creation Process](#creation-process)
@@ -55,10 +55,10 @@ The dictionary words are based on the shark and kayak words.
 - I came up with a kayaker being chased by a shark as kayaking is a hobby of mine and I love the ocean including sharks.
 - So once the idea was hatched searched words for the dictionary and images for the helper file.
 - Then once most of the rough ideas were there I needed a tool to structure things this is why I used a flow chart.
-- Programming in Python was really nice and had a natural feeling to it the love-sanwidtches were enouph to help with my code.
+- Programming in Python was a natural feeling to it the love-sandwitches of were enouph to help with my code.
 - I generally wrote one function then tested it and fixed or added code to this function before moving to the next function.
-- All the preparation before helped starting to code really helped me in the writing the code.
-
+- All the preparation before starting to code helped me in writing the code.
+   
 ### Flow chart 
 
 - The flow chart was the start of this project to make a rough idea of how the game is going to work.
@@ -308,12 +308,9 @@ This project was deployed using Code Institute's mock terminal for Heroku.
 The steps for deployment are:
 
 - Create a new Heroku app with a unique name and the region
-
 - In the "settings" tab, set the buildpacks to 'Python' and 'NodeJS' (the order is important)
 - Link the Heroku app to the GitHub repository
-
 - In case it is wished, enable "automatic deploys" to automaticly update the app in case of a new commit
-
 - Click on Deploy in the "manual deploy" area
 
 

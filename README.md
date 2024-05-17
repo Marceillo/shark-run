@@ -219,13 +219,14 @@ The dictionary words are based on the shark and kayak words.
 - [PEP8ci](https://pep8ci.herokuapp.com/#) - This was used to validate.
 - [Heruku](https://id.heroku.com/login) - Used to deploy the game.
 - [Asciiart](https://www.asciiart.eu) - Used for the display art.
+- [Lucid Chart](https://www.lucidchart.com/pages/de) -Used to creat the flow chart.
 
 ## Python Packages
 
-- [Colorama](https://pypi.org/project/colorama/)
-- [Time](https://docs.python.org/3/library/time.html)
-- [OS](https://docs.python.org/3/library/os.html)
-- [Random](https://docs.python.org/3/library/random.html)
+- [Colorama](https://pypi.org/project/colorama/) - Used in the art images for color.
+- [Time](https://docs.python.org/3/library/time.html) - Used to create a time pause for messages.
+- [OS](https://docs.python.org/3/library/os.html) - Used to clear the console and keep it tidy. 
+- [Random](https://docs.python.org/3/library/random.html) - Used to select a random word from the dictionery.
 
 [Back to top](#contents)
   
@@ -233,16 +234,28 @@ The dictionary words are based on the shark and kayak words.
 
 ### Manual Testing
 
-### Validator Testing 
+### Validator Testing
 
-- [Pep8ci](https://pep8ci.herokuapp.com/#)
-     
+- The code was checked using the CI Python Linter all errors were corrected and cleared.
 
-- ![Pep8ci](assets/images/desktop-lighthouse.png)
-            
-- cleared errors Result
+#### Run.py 
 
-- ![Pep8ci](assets/images/mobile-lighthouse.png)
+- ![Pep8ci](gallery/cleared-pip8-run.png)
+
+##### Errors
+
+- Errors found and repaired 
+
+[Pep8ci](gallery/error-1-run.png)
+[Pep8ci](gallery/error-2-run.png)
+[Pep8ci](gallery/error-3-run.png)
+[Pep8ci](gallery/error-4-run.png)
+
+
+           
+#### Shark.py
+
+- ![Pep8ci](gallery/clear-shark-pep8.png)
 
    
 

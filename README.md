@@ -303,9 +303,19 @@ The dictionary words are based on the shark and kayak words.
 
 ## Deployment
 
-Deployed the site on GitHub using the following procedure:
--Heroku
-1. By
+This project was deployed using Code Institute's mock terminal for Heroku.
+
+The steps for deployment are:
+
+- Create a new Heroku app with a unique name and the region
+
+- In the "settings" tab, set the buildpacks to 'Python' and 'NodeJS' (the order is important)
+- Link the Heroku app to the GitHub repository
+
+- In case it is wished, enable "automatic deploys" to automaticly update the app in case of a new commit
+
+- Click on Deploy in the "manual deploy" area
+
 
 The instruction link below on how to fork a project:
 

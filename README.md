@@ -301,6 +301,14 @@ The dictionary words are based on the shark and kayak words.
 
 [Back to top](#contents)
 
+### Browser Compatibility
+
+The Shark-Run console was tested on the following browsers with no problems found.
+- Google Chrome
+- Mozilla Firefox
+- Microsoft Edge
+- Brave 
+
 ## Deployment
 
 This project was deployed using Code Institute's mock terminal for Heroku.

@@ -40,12 +40,13 @@ The dictionary words are based on the shark and kayak words.
 
 ### Primary Goal 
 
-- The main goal is to have a bit of fun guessing the letters of the words.
+- Is for people to have some fun with words and letters while learning the spelling of the word. 
 
 ### Visitor Goal
 
 - The visitor should easily run the program and play the game.
-- Winning or losing is not the goal only enjoying the game.
+- The visitor schould experionce a ocean them and a old sailer language for humor.
+- The game has the same level of difficulty for everyone .
 
 ## Creation Process
 ### Planning
@@ -53,11 +54,11 @@ The dictionary words are based on the shark and kayak words.
 - I knew I was going to do a word-guessing game similar to a hangman game.
 - So I took time to think about the visual experience with some brainstorming.
 - I came up with a kayaker being chased by a shark as kayaking is a hobby of mine and I love the ocean including sharks.
-- So once the idea was hatched searched words for the dictionary and images for the helper file.
-- Then once most of the rough ideas were there I needed a tool to structure things this is why I used a flow chart.
-- Programming in Python was a natural feeling to it the love-sandwitches of were enouph to help with my code.
+- Once the idea was hatched searched for words for the dictionary and some art to present a better visual experience.
+- Once most of the rough ideas and content were there I needed a tool to structure things this is why I used a flow chart.
+- Programming in Python was a natural feeling to it. 
+- The love-sandwitches walkthough was enouph to help with my base code.
 - I generally wrote one function then tested it and fixed or added code to this function before moving to the next function.
-- All the preparation before starting to code helped me in writing the code.
    
 ### Flow chart 
 
@@ -74,20 +75,19 @@ The dictionary words are based on the shark and kayak words.
   lines.
 - dependencies are added to the requirements.txt.
 - I wanted the game to flow from one function to the next in the  Python language.
-- I created a helper file called shark as this helped to keep the code easy to read in the main code file.
-- The helper file also keeps all the art and added functions, to a minimum in the main code.
+- I created a helper file called shark as this helped to keep the code easy to read  and clean. 
 - This makes for easier implementation and error handling.
-- The language used is an old sailer nautical language as it fits with them and is different.
-- after the welcome message the player has an opportunity to insert a player name or username for a better word.
+- The language used is an old sailer nautical language as it fits with theme of the project.
+- After the welcome message the player has an opportunity to insert a player name or username for a better word.
 - Certain messages have ASCII art as this personalized the experience with often the username displayed and information in others.
 - The ASCII art also plays a role in displaying a color-changing image indicating to the user that they are reaching critical life 
   levels.
-- Implemented error message should they have used the incorrect value or correct value.  
+- Implemented error handeling messages, should the user have provided a incorrect value.  
   
 ## Colour used from Colorama  
 
 - I used some of the colors provided by Colorama (RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE)
-- For this game, I chose CYAN as it is the closer color to the ocean for the start of the game.
+- For this game, I chose CYAN as it is a better color to represent the ocean for the start of the game.
 - Other colors were YELLOW and RED to signify to the user the shark is getting closer with each incorrect answer.
 - GREEN was used for the instructions and when you win the game. 
 
@@ -122,7 +122,7 @@ The dictionary words are based on the shark and kayak words.
 
 ![Correct-Username](gallery/correct-username.png)
 
-- Should you use any other characters, numbers or anything else except alphabet letters will be seen as incorrect.
+- Should the user use any none alphabetical character, like numbers or special characters, an error will be raised.
 - An error message will print indicating what is required and you will need to enter it again:(
 
 ![Incorrect-Username](gallery/incorrect-username.png)
@@ -216,7 +216,7 @@ The dictionary words are based on the shark and kayak words.
 ## Data Model
 
 - The game is built on functions in the game and no external API is used.
-- I have two -py files one that runs the game and the other that contains the helper files such as art or functions.
+- I have two .py files one that runs the game and the other that contains the helper files such as art or functions.
 - Certain python packages have been used as indicated below technologies used.
 - Heruku is an automatic deploy so any changes to the file update Heruku automatically.  
    
@@ -291,7 +291,7 @@ The dictionary words are based on the shark and kayak words.
   - Throughout the project, I often had to ensure that the functions were called properly from the main function and in the code.
 - In the guess-word-letter function was not printing the correct underscores for the word and was confusing for other players.
   - To correct this I found that my print command in the function was incorrect so the code was changed to this code: print(' '.join(letter_word)).
-- I had art messages and because of the graphics in them they had \ this created errors in Python the solution was to use the r and f string prefixes together.
+- I had art messages and because of the graphics in them they had \ this created errors, in Python the solution was to use the r and f string prefixes together.
   - This enabled me to keep the graphics as is and call data in the message such as a username for example.
 - I have to say there were other bugs that I just can not remember as I went on fixing them from one line of code to the next.
 

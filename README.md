@@ -1,6 +1,6 @@
 # Shark-Run 
 
-Welcome to Shark-Run live program [Shark-Run](https://shark-run-e1a617839e7e.herokuapp.com/).
+Welcome to Shark-Run live program [Shark-Run](https://shark-run.onrender.com).
 
 The game is a word-guessing game similar to the old hangman game.
 Only in this game, do you have a kayaker and a shark chasing the kayaker.
